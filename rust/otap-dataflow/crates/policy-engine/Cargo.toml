@@ -1,0 +1,63 @@
+[package]
+name = "otel-arrow-dfe-policy-engine"
+description = "Pure-Rust columnar telemetry policy evaluation engine for OTAP / Arrow Dataflow"
+version.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+publish.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[lints]
+workspace = true
+
+[features]
+default = []
+baseline-vectorscan = ["dep:policy-rs", "dep:vectorscan-rs-sys"]
+
+[dependencies]
+ahash.workspace = true
+aho-corasick.workspace = true
+arrow.workspace = true
+arrow-array.workspace = true
+arrow-buffer.workspace = true
+arrow-schema.workspace = true
+arrow-select.workspace = true
+bytes.workspace = true
+ciborium.workspace = true
+hashbrown.workspace = true
+hex.workspace = true
+memchr.workspace = true
+otel-arrow-contrib-data-engine-expressions.workspace = true
+otel-arrow-contrib-data-engine-parser-abstractions.workspace = true
+otel-arrow-dfe-pdata.workspace = true
+otel-arrow-dfe-pdata-views.workspace = true
+otel-arrow-dfe-query-engine.workspace = true
+otel-arrow-dfe-query-engine-languages.workspace = true
+parking_lot.workspace = true
+prost.workspace = true
+regex.workspace = true
+regex-automata.workspace = true
+regex-syntax.workspace = true
+roaring.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+smallvec.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+
+policy-rs = { workspace = true, optional = true }
+vectorscan-rs-sys = { workspace = true, optional = true }
+
+[dev-dependencies]
+criterion.workspace = true
+opentelemetry-proto.workspace = true
+pretty_assertions.workspace = true
+rand.workspace = true
+tokio.workspace = true
+
+[[bench]]
+name = "engine"
+harness = false
+required-features = ["baseline-vectorscan"]

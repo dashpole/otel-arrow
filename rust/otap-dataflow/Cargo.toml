@@ -312,6 +312,10 @@ otel-arrow-dfe-engine-macros = { version = "0.65.0", path = 'crates/engine-macro
 otel-arrow-dfe-component-inventory-syntax = { version = "0.65.0", path = 'crates/component-inventory-syntax' }
 otel-arrow-dfe-query-engine-languages = { version = "0.65.0", path = 'crates/query-engine-languages' }
 otel-arrow-dfe-query-engine = { version = "0.65.0", path = 'crates/query-engine' }
+otel-arrow-dfe-policy-engine = { version = "0.65.0", path = 'crates/policy-engine' }
+aho-corasick = "1.1.5"
+policy-rs = "1.8.2"
+vectorscan-rs-sys = "0.0.6"
 otel-arrow-dfe-state = { version = "0.65.0", path = 'crates/state' }
 otel-arrow-dfe-telemetry-macros = { version = "0.65.0", path = 'crates/telemetry-macros' }
 prost-build = "0.14"
